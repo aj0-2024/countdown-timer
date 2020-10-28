@@ -1,2 +1,2 @@
-# Countdown timer component in React
+# Countdown timer 
 A simple countdown timer component
