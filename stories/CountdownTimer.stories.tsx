@@ -1,9 +1,9 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { CountdownTimerProps, CountdownTimer } from '../src';
+import React from "react";
+import { Meta, Story } from "@storybook/react";
+import { CountdownTimerProps, CountdownTimer } from "../src";
 
 const meta: Meta = {
-    title: 'Welcome',
+    title: "Components",
     component: CountdownTimer,
 };
 
