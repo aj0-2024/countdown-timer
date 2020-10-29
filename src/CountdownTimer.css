@@ -1,0 +1,16 @@
+.countdown-timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-timer-actions {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.countdown-timer-action-button {
+    border: none;
+}
