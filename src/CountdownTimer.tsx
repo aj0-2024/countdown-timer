@@ -1,6 +1,8 @@
 import React, { FC, HTMLAttributes } from "react";
 import "./CountdownTimer.css";
 import TimeUnitInput from "./TimeUnitInput";
+import PlayIcon from "./icons/play.svg";
+// import PauseIcon from "./icons/pause_circle_outline_24px.svg";
 
 export interface CountdownTimerProps extends HTMLAttributes<HTMLDivElement> {
     onStop?: () => void;
@@ -22,7 +24,9 @@ export const CountdownTimer: FC<CountdownTimerProps> = () => {
             </div>
 
             <div className="countdown-timer-actions">
-                <button className="countdown-timer-action">START</button>
+                <button className="countdown-timer-action">
+                    <PlayIcon />
+                </button>
             </div>
         </div>
     );
