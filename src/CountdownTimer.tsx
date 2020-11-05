@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, HTMLAttributes, useState } from "react";
 import "./CountdownTimer.css";
 import TimeUnitInput from "./TimeUnitInput";
 import PlayIcon from "./icons/play.svg";
@@ -13,29 +13,29 @@ export interface CountdownTimerProps extends HTMLAttributes<HTMLDivElement> {
 // see: https://github.com/storybookjs/storybook/issues/9556
 
 export const CountdownTimer: FC<CountdownTimerProps> = () => {
-    const onChangeHours = () => {};
-    const onChangeMinutes = () => {};
-    const onChangeSeconds = () => {};
+    const [hours, setHours] = useState<number>(0);
+    const [minutes, setMinutes] = useState<number>(0);
+    const [seconds, setSeconds] = useState<number>(0);
 
     return (
         <div className="countdown-timer-container">
             <div className="countdown-timer-input-fields">
                 <TimeUnitInput
                     label={"Hours"}
-                    value={0}
-                    onChange={onChangeHours}
+                    value={hours}
+                    onChange={setHours}
                 />
                 <span>:</span>
                 <TimeUnitInput
                     label={"Minutes"}
-                    value={0}
-                    onChange={onChangeMinutes}
+                    value={minutes}
+                    onChange={setMinutes}
                 />
                 <span>:</span>
                 <TimeUnitInput
                     label={"Seconds"}
-                    value={0}
-                    onChange={onChangeSeconds}
+                    value={seconds}
+                    onChange={setSeconds}
                 />
             </div>
 
