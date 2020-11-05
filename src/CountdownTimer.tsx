@@ -16,11 +16,11 @@ export const CountdownTimer: FC<CountdownTimerProps> = () => {
     return (
         <div className="countdown-timer-container">
             <div className="countdown-timer-input-fields">
-                <TimeUnitInput />
+                <TimeUnitInput label={"Hours"} />
                 <span>:</span>
-                <TimeUnitInput />
+                <TimeUnitInput label={"Minutes"} />
                 <span>:</span>
-                <TimeUnitInput />
+                <TimeUnitInput label={"Seconds"} />
             </div>
 
             <div className="countdown-timer-actions">
