@@ -18,4 +18,12 @@
 }
 
 .countdown-timer-action-button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.countdown-timer-icon {
+    width: 48px;
+    height: 48px;
 }

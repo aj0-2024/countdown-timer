@@ -24,8 +24,12 @@ export const CountdownTimer: FC<CountdownTimerProps> = () => {
             </div>
 
             <div className="countdown-timer-actions">
-                <button className="countdown-timer-action">
-                    <img src={PlayIcon} alt="Play" />
+                <button className="countdown-timer-action-button">
+                    <img
+                        className="countdown-timer-icon"
+                        src={PlayIcon}
+                        alt="Play"
+                    />
                 </button>
             </div>
         </div>
