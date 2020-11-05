@@ -13,14 +13,30 @@ export interface CountdownTimerProps extends HTMLAttributes<HTMLDivElement> {
 // see: https://github.com/storybookjs/storybook/issues/9556
 
 export const CountdownTimer: FC<CountdownTimerProps> = () => {
+    const onChangeHours = () => {};
+    const onChangeMinutes = () => {};
+    const onChangeSeconds = () => {};
+
     return (
         <div className="countdown-timer-container">
             <div className="countdown-timer-input-fields">
-                <TimeUnitInput label={"Hours"} />
+                <TimeUnitInput
+                    label={"Hours"}
+                    value={0}
+                    onChange={onChangeHours}
+                />
                 <span>:</span>
-                <TimeUnitInput label={"Minutes"} />
+                <TimeUnitInput
+                    label={"Minutes"}
+                    value={0}
+                    onChange={onChangeMinutes}
+                />
                 <span>:</span>
-                <TimeUnitInput label={"Seconds"} />
+                <TimeUnitInput
+                    label={"Seconds"}
+                    value={0}
+                    onChange={onChangeSeconds}
+                />
             </div>
 
             <div className="countdown-timer-actions">
