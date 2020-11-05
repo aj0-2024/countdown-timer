@@ -1,6 +1,7 @@
 import React, { FC, HTMLAttributes, useState } from "react";
+import TimeInput, { TimeValue } from "./TimeInput";
 import "./CountdownTimer.css";
-import TimeUnitInput from "./TimeUnitInput";
+
 import PlayIcon from "./icons/play.svg";
 // import PauseIcon from "./icons/pause.svg";
 
@@ -13,32 +14,15 @@ export interface CountdownTimerProps extends HTMLAttributes<HTMLDivElement> {
 // see: https://github.com/storybookjs/storybook/issues/9556
 
 export const CountdownTimer: FC<CountdownTimerProps> = () => {
-    const [hours, setHours] = useState<number>(0);
-    const [minutes, setMinutes] = useState<number>(0);
-    const [seconds, setSeconds] = useState<number>(0);
+    const [timeValue, setTimeValue] = useState<TimeValue>({
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+    });
 
     return (
         <div className="countdown-timer-container">
-            <div className="countdown-timer-input-fields">
-                <TimeUnitInput
-                    label={"Hours"}
-                    value={hours}
-                    onChange={setHours}
-                />
-                <span>:</span>
-                <TimeUnitInput
-                    label={"Minutes"}
-                    value={minutes}
-                    onChange={setMinutes}
-                />
-                <span>:</span>
-                <TimeUnitInput
-                    label={"Seconds"}
-                    value={seconds}
-                    onChange={setSeconds}
-                />
-            </div>
-
+            <TimeInput value={timeValue} onChange={setTimeValue} />
             <div className="countdown-timer-actions">
                 <button className="countdown-timer-action-button">
                     <img
