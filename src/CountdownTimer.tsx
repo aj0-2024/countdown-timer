@@ -19,12 +19,25 @@ export const CountdownTimer: FC<CountdownTimerProps> = () => {
         minutes: 0,
         seconds: 0,
     });
+    const [timeExpiry, setTimeExpiry] = useState<Date>(new Date());
+
+    const toggleTimer = () => {
+        const timeNow = new Date();
+        timeNow.setHours(timeNow.getHours() + timeValue.hours);
+        timeNow.setMinutes(timeNow.getMinutes() + timeValue.minutes);
+        timeNow.setSeconds(timeNow.getSeconds() + timeValue.seconds);
+        setTimeExpiry(timeNow);
+        console.log(timeExpiry);
+    };
 
     return (
         <div className="countdown-timer-container">
             <TimeInput value={timeValue} onChange={setTimeValue} />
             <div className="countdown-timer-actions">
-                <button className="countdown-timer-action-button">
+                <button
+                    onClick={toggleTimer}
+                    className="countdown-timer-action-button"
+                >
                     <img
                         className="countdown-timer-icon"
                         src={PlayIcon}
