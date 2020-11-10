@@ -1,5 +1,6 @@
 import React, { FC, HTMLAttributes, useState } from "react";
 import TimeInput, { TimeValue } from "./TimeInput";
+import TimerDisplay from "./TimerDisplay";
 import "./CountdownTimer.css";
 
 import PlayIcon from "./icons/play.svg";
@@ -27,12 +28,12 @@ export const CountdownTimer: FC<CountdownTimerProps> = () => {
         timeNow.setMinutes(timeNow.getMinutes() + timeValue.minutes);
         timeNow.setSeconds(timeNow.getSeconds() + timeValue.seconds);
         setTimeExpiry(timeNow);
-        console.log(timeExpiry);
     };
 
     return (
         <div className="countdown-timer-container">
             <TimeInput value={timeValue} onChange={setTimeValue} />
+            <TimerDisplay expiryTime={timeExpiry} />
             <div className="countdown-timer-actions">
                 <button
                     onClick={toggleTimer}
