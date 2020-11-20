@@ -3,21 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.countdown-timer-actions {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-}
-
-.countdown-timer-action-button {
-    border: none;
-    cursor: pointer;
-    background: transparent;
-}
-
-.countdown-timer-icon {
-    width: 48px;
-    height: 48px;
+    width: 4in;
+    height: 4in;
+    border-radius: 8px;
+    border: 5px solid #40e0d0;
 }
